@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
 	},
 	tabbarContainer: {
 		flexDirection: "row",
-		justifyContent: "space-evenly",
+		justifyContent: "space-around",
 		padding: 8,
 	},
 });
