@@ -1,15 +1,19 @@
-import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+import { StyleSheet, Text, View, SafeAreaView, ScrollView } from "react-native";
 import Header from "../components/home/Header";
 import React from "react";
 import Stories from "../components/home/Stories";
 import Post from "../components/home/Post";
+import TabBar from "../components/home/TabBar";
 
 const HomeScreen = () => {
 	return (
 		<SafeAreaView style={styles.container}>
 			<Header stickyHeaderIndices={[0]} />
-			<Stories />
-			<Post />
+			<ScrollView showVerticalScrollIndicator={false} vertical>
+				<Stories />
+				<Post />
+			</ScrollView>
+			<TabBar />
 		</SafeAreaView>
 	);
 };
