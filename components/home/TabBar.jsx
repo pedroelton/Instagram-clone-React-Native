@@ -1,4 +1,4 @@
-import { StyleSheet, View, Image } from "react-native";
+import { StyleSheet, View, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import Icon from "./Icon";
 
@@ -9,10 +9,12 @@ const TabBar = () => {
 			<Icon source={require("../../assets/search.png")} />
 			<Icon source={require("../../assets/reels.png")} />
 			<Icon source={require("../../assets/shopping.png")} />
-			<Image
-				source={require("../../assets/avatar.png")}
-				style={styles.avatar}
-			/>
+			<TouchableOpacity>
+				<Image
+					source={require("../../assets/avatar.png")}
+					style={styles.avatar}
+				/>
+			</TouchableOpacity>
 		</View>
 	);
 };
@@ -22,8 +24,8 @@ export default TabBar;
 const styles = StyleSheet.create({
 	avatar: {
 		borderRadius: 40,
-		width: 28,
-		height: 28,
+		width: 24,
+		height: 24,
 	},
 	tabbarContainer: {
 		flexDirection: "row",
